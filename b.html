@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 9]>
+<script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>jQuery UI 測試</title>
+  <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/themes/hot-sneaks/jquery-ui.css" rel="stylesheet">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+  <style>
+    article,aside,figure,figcaption,footer,header,hgroup,menu,nav,section {display:block;}
+    body {font: 62.5% "Trebuchet MS", sans-serif; margin: 50px;}
+  </style>
+</head>
+<body>
+  <input id="datepicker1" type="text" value="📅入住日期"/>
+  <input id="datepicker2" type="text" value="📅退房日期"/>
+  <button id="button1">設定日期為 2013-04-01</button>
+  <button id="button2">取得日期</button>
+  <button id="button4">搜尋日期</button>
+  <button id="button3">切換 showWeek</button>
+  <div id="msgbox1" title="訊息"></div>
+	<p id="msgbox2"></p>
+  <script language="JavaScript">
+    $(document).ready(function(){
+      $.datepicker.regional['zh-TW']={
+        dayNames:["星期日","星期一","星期二","星期三","星期四","星期五","星期六"],
+        dayNamesMin:["日","一","二","三","四","五","六"],
+        monthNames:["一月","二月","三月","四月","五月","六月","七月","八月","九月","十月","十一月","十二月"],
+        monthNamesShort:["一月","二月","三月","四月","五月","六月","七月","八月","九月","十月","十一月","十二月"],
+        prevText:"上月",
+        nextText:"次月",
+        weekHeader:"週"
+        };
+	
+      $.datepicker.setDefaults($.datepicker.regional["zh-TW"]);
+      $("#datepicker1").datepicker({dateFormat:"yy-mm-dd",
+                                   onSelect: show_select,
+				   minDate: 0
+                                   });
+	
+      $.datepicker.setDefaults($.datepicker.regional["zh-TW"]);
+      $("#datepicker2").datepicker({dateFormat:"yy-mm-dd",
+                                   onSelect: show_select,
+				    minDate:'+1d'
+                                   });
+      function show_select() {
+        var date=$("#datepicker1").datepicker("getDate");
+        $("#msgbox1").html("選取的日期 : " + date);
+        //$("#msgbox1").dialog("open");        
+        }
+      $("#button1").button();
+      $('#button1').click(function(){
+        $("#datepicker1").datepicker("setDate",new Date(2013,3,1));
+        });
+      $("#button2").button();
+      $('#button2').click(function(){
+        var date=$("#datepicker1").datepicker("getDate");
+	var date2=$("#datepicker2").datepicker("getDate");
+        date=$.datepicker.formatDate("yy年 M d 日", date);
+	date2=$.datepicker.formatDate("yy年 M d 日", date2);
+        $("#msgbox1").html("選取的日期 : " + date);
+        //$("#msgbox1").dialog("open");
+	 document.getElementById("msgbox2").innerHTML = date + "&nbsp; - &nbsp;" + date2 ;
+        });
+      $("#button3").button();
+      $('#button3').click(function(){
+        var showWeek=$("#datepicker1").datepicker("option", "showWeek");
+	if (showWeek) {$("#datepicker1").datepicker("option", "showWeek", false);showWeek=false;}
+	else {$("#datepicker1").datepicker("option", "showWeek", true);showWeek=true;}
+        $("#msgbox1").html("已將 showWeek 選項設為 : " + showWeek);
+        $("#msgbox1").dialog("open");
+        });
+      $("#msgbox1").dialog({autoOpen: false, 
+                            buttons: {"確定": function() {$(this).dialog("close");}}
+ 
+                            });
+      });
+  </script>
+</body>
+</html>

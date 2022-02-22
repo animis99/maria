@@ -1,0 +1,716 @@
+			<input type="hidden" name="datepicker1"  value="${param.datepicker1 }"/>
+					<input type="hidden" name="datepicker2"  value="${param.datepicker2 }"/>
+					<input type="hidden" name="night" id="night" value="${param.night }"/>
+					<input type="hidden" name="total" id="total" value="${param.total }"/>
+					<input type="hidden" name="price" id="price" value="13268"/>
+					
+	<c:forEach items="${r1.rows}" var="row" varStatus="s"  >
+			<c:if test="${!empty row.suit}">
+			<c:if test="${row.checkout >= param.currentdate }">				
+					<c:if test="${ param.datepicker1 > row.checkout }">	
+					<c:if test="${ param.datepicker2 > row.checkout }">	
+					<c:set var="nobook"  value="日期無人預定" scope="session"/>
+					<c:set var="bok"  value="ture" scope="session"/>
+						<c:if test="${bok == 'ture'}"> 
+						
+						
+						<div style="width:100%; margin-bottom:0px;">
+				<div  style="width:70%; height:auto; margin:0 auto;">
+				<table  style="border-top-style: solid ; border-bottom-style: solid ; 
+				border-width:1.5px; padding-top:20px; padding-bottom:20px;">
+					<p style="text-align: center; font-size:20px;"> 
+				
+					<form action="book.jsp" method="get"> 
+					<input type="hidden" name="datepicker1"  value="${param.datepicker1 }"/>
+					<input type="hidden" name="datepicker2"  value="${param.datepicker2 }"/>
+					<input type="hidden" name="night" id="night" value="${param.night }"/>
+					<input type="hidden" name="photo" id="photo" value="image/cavesuitewithoutdoorheatedprivat_6718.jpg"/>
+					<input type="hidden" name="price" id="price" value="13268"/>
+					<input type="hidden" name="suit"  value="洞穴套房 (附室外私人加熱按摩浴缸)" />
+					<input type="hidden" name="total" id="total" value="${param.total }"/>
+				
+				<tr  >
+					<td rowspan="3" style="padding-right:20px;">
+						<img src="image/cavesuitewithoutdoorheatedprivat_6718.jpg" style="width:280px; height:250px;">
+					</td>
+					<td>
+					<p style="font-size:26px; font-weight:bold;">洞穴套房 (附室外私人加熱按摩浴缸)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+					</td>	
+					<td >
+					</td>
+					<td >
+					</td>
+				</tr>
+				<tr>
+					<td >
+					</td>
+					<td >
+						
+					</td>
+					<td >
+						<p style="font-size:26px; font-weight:bold; ">NT.13268</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<p style="font-size:18px;">入住人數：2人</p>	
+					</td>
+					<td>
+					
+					</td>
+					<td >
+					
+					<input  type="submit" class="book" value="預訂房間" style="width:120px; height:40px;
+					 ">
+					</td>
+				
+				</tr>
+					</form>	
+					</p>
+					</table>
+					</div>	
+				</div>
+							
+						</c:if>
+				</c:if>
+				</c:if>
+				</c:if>
+				</c:if>
+				</c:forEach>
+
+			<c:forEach items="${r2.rows}" var="row" varStatus="s" >
+			<c:if test="${!empty row.suit}">
+			<c:if test="${row.checkin >= param.currentdate }">	
+				
+					
+					<c:if test="${ param.datepicker1 > row.checkout }">	
+					<c:if test="${ param.datepicker2 > row.checkout }">	
+					<c:set var="nobook"  value="日期無人預定" scope="session"/>
+					<c:set var="bok"  value="ture" scope="session"/>
+						<c:if test="${bok == 'ture'}"> 
+						
+						
+						<div style="width:100%; margin-bottom:0px;">
+				<div  style="width:70%; height:auto; margin:0 auto;">
+				<table  style=" border-bottom-style: solid ; border-top-style: solid ; 
+				border-width:1.5px; padding-top:20px; padding-bottom:20px;">
+					<p style="text-align: center; font-size:20px;"> 
+				
+					<form action="book.jsp" method="get"> 
+					<input type="hidden" name="datepicker1"  value="${param.datepicker1 }"/>
+					<input type="hidden" name="datepicker2"  value="${param.datepicker2 }"/>
+					<input type="hidden" name="night" id="night" value="${param.night }"/>
+					<input type="hidden" name="photo" id="photo" value="image/executivecavesuitewithprivatehea_4311.jpg"/>
+					<input type="hidden" name="price" id="price" value="21146"/>
+					<input type="hidden" name="suit"  value="行政洞穴套房 (附室外私人加熱按摩浴缸)" />
+					<input type="hidden" name="total" id="total" value="${param.total }"/>
+				
+				<tr  >
+					<td rowspan="3" style="padding-right:20px;">
+						<img src="image/executivecavesuitewithprivatehea_4311.jpg" style="width:280px; height:250px;">
+					</td>
+					<td>
+					<p style="font-size:26px; font-weight:bold;">行政洞穴套房 (附室外私人加熱按摩浴缸)</p>
+					</td>	
+					<td >
+					</td>
+					<td >
+					</td>
+				</tr>
+				<tr>
+					<td >
+					</td>
+					<td >
+						
+					</td>
+					<td >
+						<p style="font-size:26px; font-weight:bold; ">NT.21146</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<p style="font-size:18px;">入住人數：2人</p>	
+					</td>
+					<td>
+					
+					</td>
+					<td >
+					
+					<input  type="submit" class="book" value="預訂房間" style="width:120px; height:40px;
+					 ">
+					</td>
+				
+				</tr>
+					</form>	
+					</p>
+					</table>
+					</div>	
+				</div>
+							
+						</c:if>
+				</c:if>
+				</c:if>
+				</c:if>
+				</c:if>
+				</c:forEach>
+			
+			<c:forEach items="${r3.rows}" var="row" varStatus="s" >
+			<c:if test="${!empty row.suit}">
+			<c:if test="${row.checkin >= param.currentdate }">	
+				
+					
+					<c:if test="${ param.datepicker1 > row.checkout }">	
+					<c:if test="${ param.datepicker2 > row.checkout }">	
+					<c:set var="nobook"  value="日期無人預定" scope="session"/>
+					<c:set var="bok"  value="ture" scope="session"/>
+						<c:if test="${bok == 'ture'}"> 
+						
+						
+						<div style="width:100%; margin-bottom:0px;">
+				<div  style="width:70%; height:auto; margin:0 auto;">
+				<table  style=" border-bottom-style: solid ; border-top-style: solid ; 
+				border-width:1.5px; padding-top:0px; padding-bottom:20px;">
+					<p style="text-align: center; font-size:20px;"> 
+				
+					<form action="book.jsp" method="get"> 
+					<input type="hidden" name="datepicker1"  value="${param.datepicker1 }"/>
+					<input type="hidden" name="datepicker2"  value="${param.datepicker2 }"/>
+					<input type="hidden" name="night" id="night" value="${param.night }"/>
+					<input type="hidden" name="photo" id="photo" value="image/room3.jpg"/>
+					<input type="hidden" name="price" id="price" value="13216 "/>
+					<input type="hidden" name="suit"  value="蜜月洞穴套房 (附室外私人加熱按摩浴缸)" />
+					<input type="hidden" name="total" id="total" value="${param.total }"/>
+				
+				<tr  >
+					<td rowspan="3" style="padding-right:20px;">
+						<img src="image/room3.jpg" style="width:280px; height:250px;">
+					</td>
+					<td>
+					<p style="font-size:26px; font-weight:bold;">蜜月洞穴套房 (附室外私人加熱按摩浴缸)</p>
+					</td>	
+					<td >
+					</td>
+					<td >
+					</td>
+				</tr>
+				<tr>
+					<td >
+					</td>
+					<td >
+						
+					</td>
+					<td >
+						<p style="font-size:26px; font-weight:bold; ">NT.13216 </p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<p style="font-size:18px;">入住人數：2人</p>	
+					</td>
+					<td>
+					
+					</td>
+					<td >
+					
+					<input  type="submit" class="book" value="預訂房間" style="width:120px; height:40px;
+					 ">
+					</td>
+				
+				</tr>
+					</form>	
+					</p>
+					</table>
+					</div>	
+				</div>
+							
+						</c:if>
+				</c:if>
+				</c:if>
+				</c:if>
+				</c:if>
+				</c:forEach>
+		
+			<c:forEach items="${r4.rows}" var="row" varStatus="s" >
+			<c:if test="${!empty row.suit}">
+				<c:if test="${row.checkout >= param.currentdate }">	
+			<c:choose>
+			<c:when test="${ param.datepicker1 > row.checkin }">
+					
+			</c:when>
+			<c:when test="${ param.datepicker1 > row.checkout }">
+			
+			
+					<c:if test="${ param.datepicker1 > row.checkout }">	
+					<c:if test="${ param.datepicker2 > row.checkout }">	
+					<c:set var="nobook"  value="日期無人預定" scope="session"/>
+					<c:set var="bok"  value="ture" scope="session"/>
+						<c:if test="${bok == 'ture'}"> 
+						
+						
+						<div style="width:100%; margin-bottom:0px;">
+				<div  style="width:70%; height:auto; margin:0 auto;">
+				<table  style=" border-bottom-style: solid ; border-top-style: solid ; 
+				border-width:1.5px; padding-top:0px; padding-bottom:20px;">
+					<p style="text-align: center; font-size:20px;"> 
+				
+					<form action="book.jsp" method="get"> 
+					<input type="hidden" name="datepicker1"  value="${param.datepicker1 }"/>
+					<input type="hidden" name="datepicker2"  value="${param.datepicker2 }"/>
+					<input type="hidden" name="night" id="night" value="${param.night }"/>
+					<input type="hidden" name="photo" id="photo" value="image/suit46.jpg"/>
+					<input type="hidden" name="price" id="price" value="15595"/>
+					<input type="hidden" name="suit"  value="加大洞穴套房 (附私人溫水游泳池和按摩浴缸)" />
+					<input type="hidden" name="total" id="total" value="${param.total }"/>
+				
+				<tr  >
+					<td rowspan="3" style="padding-right:20px;">
+						<img src="image/suit46.jpg" style="width:280px; height:250px;">
+					</td>
+					<td>
+					<p style="font-size:26px; font-weight:bold;">加大洞穴套房 (附私人溫水游泳池和按摩浴缸)</p>
+					</td>	
+					<td >
+					</td>
+					<td >
+					</td>
+				</tr>
+				<tr>
+					<td >
+					</td>
+					<td >
+						
+					</td>
+					<td >
+						<p style="font-size:26px; font-weight:bold; ">NT.15595</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<p style="font-size:18px;">入住人數：2人</p>	
+					</td>
+					<td>
+					
+					</td>
+					<td >
+					
+					<input  type="submit" class="book" value="預訂房間" style="width:120px; height:40px;
+					 ">
+					</td>
+				
+				</tr>
+					</form>	
+					</p>
+					</table>
+					</div>	
+				</div>
+							
+				</c:if>
+				</c:if>
+				</c:if>
+				</c:when>
+				
+				<c:otherwise>
+					<c:if test="${ param.datepicker1 > row.checkin }">	
+					<c:if test="${ param.datepicker1 > row.checkout }">	
+					<c:set var="bok"  value="ture" scope="session"/>
+						<c:if test="${bok == 'ture'}"> 
+						
+						
+						<div style="width:100%; margin-bottom:0px;">
+				<div  style="width:70%; height:auto; margin:0 auto;">
+				<table  style=" border-bottom-style: solid ; border-top-style: solid ; 
+				border-width:1.5px; padding-top:0px; padding-bottom:20px;">
+					<p style="text-align: center; font-size:20px;"> 
+				
+					<form action="book.jsp" method="get"> 
+					<input type="hidden" name="datepicker1"  value="${param.datepicker1 }"/>
+					<input type="hidden" name="datepicker2"  value="${param.datepicker2 }"/>
+					<input type="hidden" name="night" id="night" value="${param.night }"/>
+					<input type="hidden" name="photo" id="photo" value="image/suit46.jpg"/>
+					<input type="hidden" name="price" id="price" value="15595"/>
+					<input type="hidden" name="suit"  value="加大洞穴套房 (附私人溫水游泳池和按摩浴缸)" />
+					<input type="hidden" name="total" id="total" value="${param.total }"/>
+				
+				<tr  >
+					<td rowspan="3" style="padding-right:20px;">
+						<img src="image/suit46.jpg" style="width:280px; height:250px;">
+					</td>
+					<td>
+					<p style="font-size:26px; font-weight:bold;">加大洞穴套房 (附私人溫水游泳池和按摩浴缸)</p>
+					</td>	
+					<td >
+					</td>
+					<td >
+					</td>
+				</tr>
+				<tr>
+					<td >
+					</td>
+					<td >
+						
+					</td>
+					<td >
+						<p style="font-size:26px; font-weight:bold; ">NT.15595</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<p style="font-size:18px;">入住人數：2人</p>	
+					</td>
+					<td>
+					
+					</td>
+					<td >
+					
+					<input  type="submit" class="book" value="預訂房間" style="width:120px; height:40px;
+					 ">
+					</td>
+				
+				</tr>
+					</form>	
+					</p>
+					</table>
+					</div>	
+				</div>		
+				</c:if>
+				
+			
+					
+					</c:if>
+					</c:if>
+					
+					
+					<c:if test="${ param.datepicker2 < row.checkin }">	
+					
+					<c:set var="nobook"  value="日期無人預定" scope="session"/>
+					<c:set var="bok"  value="ture" scope="session"/>
+						<c:if test="${bok == 'ture'}"> 
+						
+						
+						<div style="width:100%; margin-bottom:0px;">
+				<div  style="width:70%; height:auto; margin:0 auto;">
+				<table  style=" border-bottom-style: solid ; border-top-style: solid ; 
+				border-width:1.5px; padding-top:0px; padding-bottom:20px;">
+					<p style="text-align: center; font-size:20px;"> 
+				
+					<form action="book.jsp" method="get"> 
+					<input type="hidden" name="datepicker1"  value="${param.datepicker1 }"/>
+					<input type="hidden" name="datepicker2"  value="${param.datepicker2 }"/>
+					<input type="hidden" name="night" id="night" value="${param.night }"/>
+					<input type="hidden" name="photo" id="photo" value="image/suit46.jpg"/>
+					<input type="hidden" name="price" id="price" value="15595"/>
+					<input type="hidden" name="suit"  value="加大洞穴套房 (附私人溫水游泳池和按摩浴缸)" />
+					<input type="hidden" name="total" id="total" value="${param.total }"/>
+				
+				<tr  >
+					<td rowspan="3" style="padding-right:20px;">
+						<img src="image/suit46.jpg" style="width:280px; height:250px;">
+					</td>
+					<td>
+					<p style="font-size:26px; font-weight:bold;">加大洞穴套房 (附私人溫水游泳池和按摩浴缸)</p>
+					</td>	
+					<td >
+					</td>
+					<td >
+					</td>
+				</tr>
+				<tr>
+					<td >
+					</td>
+					<td >
+						
+					</td>
+					<td >
+						<p style="font-size:26px; font-weight:bold; ">NT.15595</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<p style="font-size:18px;">入住人數：2人</p>	
+					</td>
+					<td>
+					
+					</td>
+					<td >
+					
+					<input  type="submit" class="book" value="預訂房間" style="width:120px; height:40px;
+					 ">
+					</td>
+				
+				</tr>
+					</form>	
+					</p>
+					</table>
+					</div>	
+				</div>
+				</c:if>		
+				</c:if>
+				
+				
+				</c:otherwise>
+			</c:choose>
+				
+				</c:if>
+				</c:if>
+				
+				
+				</c:forEach>
+
+
+--------------------------------------------------------------------------------------------
+
+
+<!-- 套房1 日期判斷 -->
+<c:forEach items="${r1.rows}" var="row" varStatus="s">
+<c:if test="${!empty row.suit}">
+	<c:if test="${row.checkout >= param.currentdate }">	
+	
+<c:choose>
+<c:when test="${ row.checkin < param.datepicker1}">
+<c:if test="${ row.checkout >= param.datepicker1}">	
+日期重疊
+<c:set var="bokf" >f</c:set> 
+</c:if>
+</c:when>
+<c:when test="${ row.checkin >= param.datepicker1}">
+<c:if test="${ row.checkout <= param.datepicker2}">	
+日期已被預訂
+<c:set var="bokf" >f</c:set> 
+</c:if>
+</c:when>
+<c:otherwise>
+3
+</c:otherwise>
+</c:choose>
+</c:if>
+</c:if>
+</c:forEach>
+<!-- 套房2 日期判斷 -->
+<c:forEach items="${r2.rows}" var="row" varStatus="s">
+<c:if test="${!empty row.suit}">
+	<c:if test="${row.checkout >= param.currentdate }">	
+	
+<c:choose>
+<c:when test="${ row.checkin < param.datepicker1}">
+<c:if test="${ row.checkout >= param.datepicker1}">	
+2日期重疊
+<c:set var="bokf2" >f</c:set> 
+</c:if>
+</c:when>
+<c:when test="${ row.checkin >= param.datepicker1}">
+<c:if test="${ row.checkout <= param.datepicker2}">	
+2日期已被預訂
+<c:set var="bokf2" >f</c:set> 
+</c:if>
+</c:when>
+<c:otherwise>
+3
+</c:otherwise>
+</c:choose>
+</c:if>
+</c:if>
+</c:forEach>
+<!-- 套房3 日期判斷 -->
+<c:forEach items="${r3.rows}" var="row" varStatus="s">
+<c:if test="${!empty row.suit}">
+	<c:if test="${row.checkout >= param.currentdate }">	
+	
+<c:choose>
+<c:when test="${ row.checkin < param.datepicker1}">
+<c:if test="${ row.checkout >= param.datepicker1}">	
+3日期重疊
+<c:set var="bokf3" >f</c:set> 
+</c:if>
+</c:when>
+<c:when test="${ row.checkin >= param.datepicker1}">
+<c:if test="${ row.checkout <= param.datepicker2}">	
+3日期已被預訂
+<c:set var="bokf3" >f</c:set> 
+</c:if>
+</c:when>
+<c:otherwise>
+3
+</c:otherwise>
+</c:choose>
+</c:if>
+</c:if>
+</c:forEach>
+<!-- 套房4 日期判斷 -->
+<c:forEach items="${r4.rows}" var="row" varStatus="s">
+<c:if test="${!empty row.suit}">
+	<c:if test="${row.checkout >= param.currentdate }">	
+	
+<c:choose>
+<c:when test="${ row.checkin < param.datepicker1}">
+<c:if test="${ row.checkout >= param.datepicker1}">	
+4日期重疊
+<c:set var="bokf4" >f</c:set> 
+</c:if>
+</c:when>
+<c:when test="${ row.checkin >= param.datepicker1}">
+<c:if test="${ row.checkout <= param.datepicker2}">	
+4日期已被預訂
+<c:set var="bokf4" >f</c:set> 
+</c:if>
+</c:when>
+<c:otherwise>
+3
+</c:otherwise>
+</c:choose>
+</c:if>
+</c:if>
+</c:forEach>
+
+-----------------------------------------------------------
+
+
+<!-- 套房1 訂房判斷 -->
+<c:forEach items="${r1.rows}" var="row" varStatus="s">
+<c:if test="${!empty row.suit}">
+
+	<c:if test="${row.checkout >= param.currentdate }">	
+	
+<c:choose>
+<c:when test="${ row.checkin < param.datepicker1 }">
+<c:if test="${ row.checkout < param.datepicker1}">	
+日期不重疊 大於入住
+<c:set var="bok" >ok</c:set> 
+</c:if>
+</c:when>
+<c:when test="${ param.datepicker2 < row.checkin }">
+<c:if test="${ param.datepicker2 < row.checkout }">	
+日期不重疊 小於退房
+
+</c:if>
+</c:when>
+<c:otherwise>
+</c:otherwise>
+</c:choose>
+</c:if>
+</c:if>
+</c:forEach>
+<!-- 套房2 訂房判斷 -->
+<c:forEach items="${r2.rows}" var="row" varStatus="s">
+<c:if test="${!empty row.suit}">
+
+	<c:if test="${row.checkout >= param.currentdate }">	
+	
+<c:choose>
+<c:when test="${ row.checkin < param.datepicker1 }">
+<c:if test="${ row.checkout < param.datepicker1}">	
+2日期不重疊 大於入住
+<c:set var="bok2" >ok</c:set> 
+</c:if>
+</c:when>
+<c:when test="${ param.datepicker2 < row.checkin }">
+<c:if test="${ param.datepicker2 < row.checkout }">	
+2日期不重疊 小於退房
+
+</c:if>
+</c:when>
+<c:otherwise>
+</c:otherwise>
+</c:choose>
+</c:if>
+</c:if>
+</c:forEach>
+<!-- 套房3 日期判斷 -->
+<c:forEach items="${r3.rows}" var="row" varStatus="s">
+<c:if test="${!empty row.suit}">
+	<c:if test="${row.checkout >= param.currentdate }">	
+	
+<c:choose>
+<c:when test="${ row.checkin < param.datepicker1}">
+<c:if test="${ row.checkout >= param.datepicker1}">	
+3日期重疊
+<c:set var="bokf3" >f</c:set> 
+</c:if>
+</c:when>
+<c:when test="${ row.checkin >= param.datepicker1}">
+<c:if test="${ row.checkout <= param.datepicker2}">	
+3日期已被預訂
+<c:set var="bokf3" >f</c:set> 
+</c:if>
+</c:when>
+<c:otherwise>
+3
+</c:otherwise>
+</c:choose>
+</c:if>
+</c:if>
+</c:forEach>
+<!-- 套房4 日期判斷 -->
+<c:forEach items="${r4.rows}" var="row" varStatus="s">
+<c:if test="${!empty row.suit}">
+	<c:if test="${row.checkout >= param.currentdate }">	
+	
+<c:choose>
+<c:when test="${ row.checkin < param.datepicker1}">
+<c:if test="${ row.checkout >= param.datepicker1}">	
+4日期重疊
+<c:set var="bokf4" >f</c:set> 
+</c:if>
+</c:when>
+<c:when test="${ row.checkin >= param.datepicker1}">
+<c:if test="${ row.checkout <= param.datepicker2}">	
+4日期已被預訂
+<c:set var="bokf4" >f</c:set> 
+</c:if>
+</c:when>
+<c:otherwise>
+3
+</c:otherwise>
+</c:choose>
+</c:if>
+</c:if>
+</c:forEach>
+<!-- 套房3 訂房判斷 -->
+<c:forEach items="${r3.rows}" var="row" varStatus="s">
+<c:if test="${!empty row.suit}">
+
+	<c:if test="${row.checkout >= param.currentdate }">	
+	
+<c:choose>
+<c:when test="${ row.checkin < param.datepicker1 }">
+<c:if test="${ row.checkout < param.datepicker1}">	
+3日期不重疊 大於入住
+<c:set var="bok3" >ok</c:set> 
+</c:if>
+</c:when>
+<c:when test="${ param.datepicker2 < row.checkin }">
+<c:if test="${ param.datepicker2 < row.checkout }">	
+3日期不重疊 小於退房
+
+</c:if>
+</c:when>
+<c:otherwise>
+</c:otherwise>
+</c:choose>
+</c:if>
+</c:if>
+</c:forEach>
+<!-- 套房4 訂房判斷 -->
+<c:forEach items="${r4.rows}" var="row" varStatus="s">
+<c:if test="${!empty row.suit}">
+
+	<c:if test="${row.checkout >= param.currentdate }">	
+	
+<c:choose>
+<c:when test="${ row.checkin < param.datepicker1 }">
+<c:if test="${ row.checkout < param.datepicker1}">	
+4日期不重疊 大於入住
+<c:set var="bok4" >ok</c:set> 
+</c:if>
+</c:when>
+<c:when test="${ param.datepicker2 < row.checkin }">
+<c:if test="${ param.datepicker2 < row.checkout }">	
+4日期不重疊 小於退房
+
+</c:if>
+</c:when>
+<c:otherwise>
+</c:otherwise>
+</c:choose>
+</c:if>
+</c:if>
+</c:forEach>	
