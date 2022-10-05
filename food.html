@@ -5,15 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet" type="text/css" media="all" >
+    <link rel="icon" href="./image/m.png" type="image/x-icon" / >
     <title>Maria</title>
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
  
+    <link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/animate.css/3.1.0/animate.css">
+
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />    
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap&subset=latin-ext" rel="stylesheet" /><link rel='stylesheet' href='https://unpkg.com/swiper@6.0.2/swiper-bundle.min.css'><link rel="stylesheet" href="./style2.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
   </head>
 <style>
      body{
@@ -39,41 +44,47 @@
 </style>
 <body>
   
-    <div style="background-image: url(image/foodbg2.jpg); width:auto; height:400px; background-attachment: scroll;  background-repeat:no-repeat; background-position: center;  background-size: cover; margin-bottom: 160px;">
+    <div style="background-image: url(image/foodbg3.jpg); width:auto; height:62%; background-attachment: scroll;  background-repeat:no-repeat; background-position: center;  background-size: cover; margin-bottom: 80px;">
       
         <div class="menu">
           <div id="cssmenu">
             <ul>
+	       <div class="mega" style="float:center; margin-bottom:1%;"><a  href="index.html"><h3>Maria</h3></a></div>
                <li class=""><a href="index.html"><span>首頁</span></a></li>
                <li class="has-sub"><a href="about.html"><span>關於我們</span></a></li>
                <li><a href="room.html"><span>房型介紹</span></a></li>
-               <li class="active"><a href="contact.html"><span>餐飲美饌</span></a></li>
+               <li class="active"><a href="food.html"><span>餐飲美食</span></a></li>
             </ul>
                 </div>
           </div>	
          
     </div>
-		<div class="wrapper4">
-			<div class="a4">
-			<div style="font-size:40px; font-weight:bold; color:black; 
+
+
+
+
+		<div class="wrapper4 ">
+			
+			<div class="a4  reveal2">
+			<div  style="font-size:40px; font-weight:bold; color:black; 
 			margin-bottom:40px; margin-left:0px;">地中海美食</div>
 				
 			<p>在Maria飯店的餐廳品嘗<br>美味的地中海美食。享受口味和香氣，<br>顏色和質地的盛宴，完美結合，驚喜你的味覺<br>和滿足你的味蕾多汁的菜餚和創造性的曲折<br>完成了一個迷人的美食奇跡。 </p>
 			</div>	
-			<div class="b4">
+			<div class="b4 reveal">
 				<img src="image/food1.jpg">
-			
 			</div>
+		
 		</div>	
 
 
 
-	<div class="wrapper3">
+	<div class="wrapper3 " id="scrolled">
 		
-			<div class="b3">
+			<div class="b3 reveal2">
 				<img src="image/food2.jpg">
 			</div>
-			<div class="a3">
+			<div class="a3 reveal">
 			<div style="font-size:40px; font-weight:bold; color:black;    
 			margin-bottom:60px; margin-left:0px;">在愛琴海<br>的天空下用餐</div>
 				
@@ -83,25 +94,26 @@
 	
 
 
-	<div class="wrapper4">
-		<div class="a4">
+	<div class="wrapper4" id="scrolled">
+		<div class="a4 reveal2">
 			<div style="font-size:40px; font-weight:bold; color:black;  
 			margin-bottom:60px; margin-left:0px;">早晨<br>送餐服務</div>
 				
-			<p>豐盛而營養豐富的早餐在8點至10：30之間供應，<br>我們會放置到套房或主游泳池旁邊的休息區，<br>為客人提供精緻的傳統希臘風味和美味佳餚。 </p>
+			<p>豐盛而營養豐富的早餐在8點至10：30之間<br>供應，我們會放置到套房或主游泳池旁邊的<br>休息區，為客人提供精緻的傳統希臘風味<br>和美味佳餚。 </p>
 			</div>	
-			<div class="b4">
+			<div class="b4 reveal">
 <img src="image/food3.jpg">
 			
 			</div>
 		</div>	
 
 
-	<p  style=" letter-spacing:0px; font-size:24px; margin-bottom:16%; color:white;"   > ———&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ———</p> 
+	<p  style=" letter-spacing:0px; font-size:24px; margin-bottom:0%; color:white; float:center;"   > ———&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ———</p> 
 
 
- <footer  style=" width: 100%; height: 100px; margin-top:-60px; 
-	position: relative;   text-align:center; float:center;">
+
+ <footer  style=" width: 100%; height: 100px; margin-top:0px; 
+	position: absolute;   text-align:center; float:center; ">
 <div style="text-align:center;"><center>
 <p style="border-top: 2px solid #000000;  font-size:24px; width:80%;  " ></p></center>
 </div><br>
@@ -113,6 +125,9 @@
     </script>
     </footer>
  
+
+
+
 </body>
   <!-- import Vue before Element -->
   <script src="https://unpkg.com/vue/dist/vue.js"></script>
@@ -121,4 +136,80 @@
   <!-- JavaScript Bundle with Popper -->
 
 
+<script type="text/javascript">
+	window.addEventListener('scroll', reveal);
+	window.addEventListener('scroll', reveal2);
+
+
+	function reveal(){
+	  var reveals = document.querySelectorAll('.reveal');
+	  
+	
+	for(var i = 0; i < reveals.length; i++){
+	
+	  var windowheight = window.innerHeight;
+	  var revealtop = reveals[i].getBoundingClientRect().top;
+	  var revealpoint = 150;
+
+	  if(revealtop  <  windowheight  - revealpoint){
+	     reveals[i].classList.add('active');
+	  }
+	  else{
+	    reveals[i].classList.remove('active');
+	  }
+	}
+	}	
+	
+
+	function reveal2(){
+	  var reveals2 = document.querySelectorAll('.reveal2');
+	  for(var i2 = 0; i2 < reveals2.length; i2++){
+	
+	  var windowheight = window.innerHeight;
+	  var revealtop = reveals2[i2].getBoundingClientRect().top;
+	  var revealpoint = 150;
+
+	  if(revealtop  <  windowheight  - revealpoint){
+	     reveals2[i2].classList.add('active');
+	  }
+	  else{
+	    reveals2[i2].classList.remove('active');
+	  }
+	 }
+       }
+
+</script>
+
+<script>
+	$(window).on("scroll", function() {
+	var logo = $("#scrolled1");
+	var logo2 = $("#scrolled2");
+	var logo3 = $("#scrolled3");
+
+	logo.clearQueue();
+  	logo.stop();
+	logo2.clearQueue();
+  	logo2.stop();
+	logo3.clearQueue();
+  	logo3.stop();
+
+ if ($(this).scrollTop() > 100) { 
+   logo.animate({opacity: 1}, 600);
+ } else {
+   logo.animate({opacity: 0}, 500);
+ }
+ if ($(this).scrollTop() > 550) { 
+   logo2.animate({opacity: 1}, 600);
+ } else {
+   logo2.animate({opacity: 0}, 500);
+ }
+ if ($(this).scrollTop() > 1000) { 
+   logo3.animate({opacity: 1}, 600);
+ } else {
+   logo3.animate({opacity: 0}, 500);
+ }
+ });
+</script>
+
+	
 </html>
