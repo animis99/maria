@@ -246,7 +246,7 @@
 .wrapper3 {
 	float: center;
    	position: inherit;
-   	padding: 0% 0px 0% 24%;
+   	padding: 0% 0px 0% 20%;
 	margin:4% 0 4% 0;
     	width: 100%;
     	height: auto; 
@@ -256,14 +256,14 @@
      .a3 {
 	font-size:16px;
 	text-align:right; 
-	padding:4% 32% 0 0px;
+	padding:4% 32% 0 2%;
     	width: 30%;
    	height: auto;  
     	float:right; 
 	flex:1;
 }
      .b3{
-	padding:0 4% 0 0%;
+	padding:0 0% 0 0%;
 	width: 100%;
 	height:100%;
 	float:left; 
@@ -288,14 +288,14 @@
      .a4 {
 	font-size:16px;
 	text-align:left; 
-	padding:2% 0% 0% 34%;
-    	width: 30%;
+	padding:2% 4% 0% 30%;
+    	width: 100%;
    	height: 100%;  
     	float:left; 
 	flex:1; 
 }
      .b4{
-	padding:0 0% 0 4%;
+	padding:0 0% 0 0%;
 	width: 100%;
 	height: 100%;
 	float:left; 
@@ -380,14 +380,14 @@
 	padding:8% 0 0 0px;
     	text-align:center;
     	float:center;  
-	
+	flex:1;
 }
      .b3{
 	height: 100%;
 	width: 100%;
 	float:left; 
 	margin-top:0%;
-	  
+	  flex:1;
 }
 .wrapper4 {
 	float: inherit;
@@ -404,7 +404,7 @@
 	height: 100%;
 	padding:8% 0 0 0px;
     	text-align:center;
-    	float:center;  
+    	float:center; 
 }
    .a4 >p {
 	 
@@ -417,7 +417,7 @@
      .b4{
 	height: 100%;
 	width: 100%;
-	float:center; 
+	float:center;
 	
 }
 .container {
